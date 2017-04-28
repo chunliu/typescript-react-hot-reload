@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 
 module.exports = {
     context: resolve(__dirname, 'src'),
@@ -49,5 +50,6 @@ module.exports = {
         // prints more readable module names in the browser console on HMR updates
         new HtmlWebpackPlugin({template: resolve(__dirname, 'src/index.html')}),
         // inject <script> in html file. 
+        new OpenBrowserPlugin({url: 'http://localhost:8080'}),
     ],
 };
