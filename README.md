@@ -1,6 +1,6 @@
 # typescript-react-hot-reload
 
-This is a very simple template for creating React applications with TypeScript. It is configured hot loader to allow changes to be lived reloaded. 
+This is a very simple template for creating React applications with TypeScript. It is configured with hot loader to allow changes to be live reloaded. 
 
 This template is based on the following packages: 
 
