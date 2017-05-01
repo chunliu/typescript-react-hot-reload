@@ -17,10 +17,16 @@
     "@types/react": "^15.0.23",
     "@types/react-bootstrap": "0.0.49",
     "@types/react-dom": "^15.5.0",
+    "@types/react-router": "^4.0.5",
+    "@types/react-router-config": "^1.0.1",
+    "@types/react-router-dom": "^4.0.4",
     "bootstrap": "^3.3.7",
     "react": "^15.5.4",
     "react-bootstrap": "^0.31.0",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "react-router": "^4.1.1",
+    "react-router-config": "^1.0.0-beta.3",
+    "react-router-dom": "^4.1.1"
   },
   "devDependencies": {
     "@types/react-hot-loader": "^3.0.1",
