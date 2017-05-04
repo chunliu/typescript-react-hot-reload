@@ -1,10 +1,6 @@
-import * as React from 'react';
+import * as React from "react";
 
-interface AboutPageProps {};
-
-interface AboutPageState {};
-
-class AboutPage extends React.Component<AboutPageProps, AboutPageState> {
+class AboutPage extends React.Component<undefined, undefined> {
     public render(): JSX.Element {
         return (<span>AboutPage</span>);
     }

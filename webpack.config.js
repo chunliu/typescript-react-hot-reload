@@ -39,7 +39,19 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.tsx?$/, loader: ['react-hot-loader/webpack', 'awesome-typescript-loader', ] },
+            {
+                enforce: "pre",                
+                test: /\.(ts|tsx)?$/, 
+                loader: 'tslint-loader',
+                exclude: [resolve(__dirname, "node_modules")],
+            },             
+            { 
+                test: /\.tsx?$/, 
+                use: [
+                    {loader: 'react-hot-loader/webpack'}, 
+                    {loader: 'awesome-typescript-loader'}, 
+                ] 
+            },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
             { test: /\.css$/, loader: "style-loader!css-loader" },
             { test: /\.png$/, loader: "url-loader?limit=100000" },

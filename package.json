@@ -42,6 +42,8 @@
     "react-hot-loader": "^3.0.0-beta.6",
     "source-map-loader": "^0.2.1",
     "style-loader": "^0.16.1",
+    "tslint": "^5.2.0",
+    "tslint-loader": "^3.5.3",
     "typescript": "^2.3.2",
     "url-loader": "^0.5.8",
     "webpack": "^2.4.1",

@@ -1,7 +1,7 @@
-import * as React from 'react';
-import {NavLink} from 'react-router-dom'
+import * as React from "react";
+import {NavLink} from "react-router-dom";
 
-export const Header = () => (
+export const Header = (): JSX.Element => (
     <nav>
         <NavLink exact to="/" activeClassName="active">Home</NavLink>
         {" | "}
