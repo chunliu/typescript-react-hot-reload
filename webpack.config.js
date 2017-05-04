@@ -32,6 +32,9 @@ module.exports = {
     devServer: {
         hot: true,
         // enable HMR on the server
+        noInfo: true,
+        quiet: false,
+        // minimize the output to terminal.
         contentBase: resolve(__dirname, 'src'),
         // match the output path
         publicPath: '/'
