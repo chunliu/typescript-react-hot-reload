@@ -1,6 +1,6 @@
 import * as React from "react";
 
-class AboutPage extends React.Component<undefined, undefined> {
+class AboutPage extends React.Component<{}, {}> {
     public render(): JSX.Element {
         return (<h1>About</h1>);
     }
