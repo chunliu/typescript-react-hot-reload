@@ -14,3 +14,11 @@ Other reference:
 
 * [TypeScript document](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
 * [Hot Module Replacement in webpack](https://webpack.js.org/guides/hmr-react/)
+
+How to use this template: 
+
+```
+git clone https://github.com/chunliu/typescript-react-hot-reload.git
+npm install
+npm start
+```
