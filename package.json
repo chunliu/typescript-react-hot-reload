@@ -4,8 +4,12 @@
   "description": "A simple template for creating react app using TypeScript with hot reload.",
   "main": "index.js",
   "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.{ts,tsx}' --exclude 'src/tests/*.{ts,tsx}'",
     "start": "webpack-dev-server",
-    "test": "jest"
+    "test": "jest",
+    "build": "tsc && webpack --progress",
+    "clean": "rd /s/q built",
+    "prepublish": "tsc && webpack --progress --config webpack.prod.config.js"
   },
   "author": "Chun Liu",
   "license": "GPL",
