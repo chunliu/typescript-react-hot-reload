@@ -1,6 +1,5 @@
 import * as React from "react";
 import { Layout, Row, Col, Menu, Icon } from "antd";
-// import { Layout, Icon, Menu } from "antd";
 import { Link } from 'react-router-dom'
 import "./Header.less";
 
