@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { Layout } from 'antd';
-import Sidebar from './Sidebar';
+import * as React from "react";
+import { Layout } from "antd";
+import Sidebar from "./Sidebar";
 import { Header } from "./Header";
 import { Redirect } from "react-router-dom";
 import {renderRoutes} from "react-router-config";
@@ -14,7 +14,7 @@ const PageLayout: React.StatelessComponent<{}> = () => {
             <Layout>
                 <Layout.Content>
                     <Header />
-                    <Redirect to="/home" /> 
+                    <Redirect to="/home" />
                     {renderRoutes(routes)}
                 </Layout.Content>
             </Layout>
