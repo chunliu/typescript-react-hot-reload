@@ -10,7 +10,7 @@ interface SidebarState {
 
 class Sidebar extends React.Component<{}, SidebarState> {
     constructor() {
-        super();
+        super({});
         this.state = {
             collapsed: false,
             mode: "inline",
@@ -19,7 +19,7 @@ class Sidebar extends React.Component<{}, SidebarState> {
 
     public render(): JSX.Element {
         return (
-            <Layout.Sider collapsible collapsed={this.state.collapsed}>
+            <Layout.Sider collapsible collapsed={this.state.collapsed} onCollapse={this.toggle}>
                 <div className="ant-layout-logo" />
                 <Menu theme="dark" mode={this.state.mode} defaultSelectedKeys={["1"]}>
                     <Menu.Item key="1">
