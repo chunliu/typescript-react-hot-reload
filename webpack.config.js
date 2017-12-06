@@ -53,7 +53,7 @@ module.exports = {
                 use: [
                     {loader: 'react-hot-loader/webpack'}, 
                     {loader: 'babel-loader'},
-                    {loader: 'awesome-typescript-loader'}, 
+                    {loader: 'ts-loader'}, 
                 ] 
             },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
