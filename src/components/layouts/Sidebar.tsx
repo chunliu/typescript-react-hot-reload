@@ -8,9 +8,11 @@ interface SidebarState {
     mode: "vertical" | "inline" | "horizontal" | undefined;
 }
 
-class Sidebar extends React.Component<{}, SidebarState> {
-    constructor() {
-        super({});
+interface SidebarProps {}
+
+class Sidebar extends React.Component<SidebarProps, SidebarState> {
+    constructor(props: SidebarProps) {
+        super(props);
         this.state = {
             collapsed: false,
             mode: "inline",

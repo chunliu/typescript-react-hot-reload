@@ -2,6 +2,7 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const tsImportPluginFactory = require('ts-import-plugin');
 
 module.exports = {
     context: resolve(__dirname, 'src'),
@@ -52,9 +53,24 @@ module.exports = {
                 test: /\.(ts|tsx)?$/, 
                 use: [
                     {loader: 'react-hot-loader/webpack'}, 
-                    {loader: 'babel-loader'},
-                    {loader: 'ts-loader'}, 
-                ] 
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true,
+                            getCustomTransformers: () => ({
+                              before: [ tsImportPluginFactory({
+                                libraryName: 'antd',
+                                libraryDirectory: 'es',
+                                style: 'css',
+                              }) ]
+                            }),
+                            compilerOptions: {
+                              module: 'es2015'
+                            }
+                        },
+                    }, 
+                ],
+                exclude: [resolve(__dirname, "node_modules")],                
             },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
             { test: /\.css$/, loader: "style-loader!css-loader" },

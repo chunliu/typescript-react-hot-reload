@@ -1,6 +1,7 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const tsImportPluginFactory = require('ts-import-plugin');
 
 module.exports = {
     context: resolve(__dirname, 'src'),
@@ -22,8 +23,22 @@ module.exports = {
             { 
                 test: /\.(ts|tsx)?$/, 
                 use: [
-                    {loader: 'babel-loader'},
-                    {loader: 'ts-loader'}, 
+                    {
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true,
+                            getCustomTransformers: () => ({
+                              before: [ tsImportPluginFactory({
+                                libraryName: 'antd',
+                                libraryDirectory: 'es',
+                                style: 'css',
+                              }) ]
+                            }),
+                            compilerOptions: {
+                              module: 'es2015'
+                            }
+                        },
+                    }, 
                 ] 
             },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
