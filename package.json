@@ -12,7 +12,7 @@
     "prepublish": "tsc && webpack --progress --config webpack.prod.config.js"
   },
   "author": "Chun Liu",
-  "license": "GPL",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/chunliu/typescript-react-hot-reload"
