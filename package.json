@@ -59,8 +59,8 @@
     "tslint-loader": "^3.5.3",
     "typescript": "^2.5.3",
     "url-loader": "^0.6.2",
-    "webpack": "^3.8.1",
-    "webpack-dev-server": "^2.9.3"
+    "webpack": "^4.1.1",
+    "webpack-dev-server": "^3.1.1"
   },
   "jest": {
     "transform": {
