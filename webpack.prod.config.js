@@ -4,14 +4,12 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const tsImportPluginFactory = require('ts-import-plugin');
 
 module.exports = {
+    mode: 'production',
     context: resolve(__dirname, 'src'),
     entry: './index.tsx',
     output: {
         filename: 'hotloader.js',
-        // the output bundle
         path: resolve(__dirname, 'dist'), 
-        libraryTarget: "umd",
-        library: "Hotloader",
     },
     devtool: 'source-map',
     resolve: {
@@ -53,14 +51,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.NamedModulesPlugin(),
         // prints more readable module names in the browser console on HMR updates
         new HtmlWebpackPlugin({template: resolve(__dirname, 'src/index.html')}),
-        new webpack.optimize.UglifyJsPlugin({
-            compressor: {
-                warnings: false
-            }
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': '"production"'
         }),
-        new webpack.optimize.OccurrenceOrderPlugin(),
     ],
 };

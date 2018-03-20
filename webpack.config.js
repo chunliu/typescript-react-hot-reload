@@ -5,9 +5,9 @@ const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const tsImportPluginFactory = require('ts-import-plugin');
 
 module.exports = {
+    mode: 'development',
     context: resolve(__dirname, 'src'),
     entry: [
-        'react-hot-loader/patch',
         // activate HMR for React
         'webpack-dev-server/client?http://localhost:8080',
         // bundle the client for webpack-dev-server
@@ -52,7 +52,6 @@ module.exports = {
             { 
                 test: /\.(ts|tsx)?$/, 
                 use: [
-                    {loader: 'react-hot-loader/webpack'}, 
                     {
                         loader: 'ts-loader',
                         options: {
