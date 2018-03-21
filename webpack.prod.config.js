@@ -61,7 +61,6 @@ module.exports = {
             filename: "style.css",
             chunkFilename: "[id].css"
           }),
-        // prints more readable module names in the browser console on HMR updates
         new HtmlWebpackPlugin({template: resolve(__dirname, 'src/index.html')}),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': '"production"'

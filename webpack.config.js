@@ -9,7 +9,6 @@ module.exports = {
     mode: 'development',
     context: resolve(__dirname, 'src'),
     entry: [
-        // activate HMR for React
         'webpack-dev-server/client?http://localhost:8080',
         // bundle the client for webpack-dev-server
         // and connect to the provided endpoint
@@ -32,6 +31,8 @@ module.exports = {
         extensions: [".ts", ".tsx", ".js", ".json"]
     },
     devServer: {
+        port: '8080',
+        // Change it if other port needs to be used
         hot: true,
         // enable HMR on the server
         noInfo: true,
