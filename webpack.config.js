@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const OpenBrowserPlugin = require('open-browser-webpack-plugin');
 const tsImportPluginFactory = require('ts-import-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: 'development',
@@ -72,8 +73,10 @@ module.exports = {
                 exclude: [resolve(__dirname, "node_modules")],                
             },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-            { test: /\.css$/, loader: "style-loader!css-loader" },
-            { test: /\.less$/, loaders: ["style-loader", "css-loader", "less-loader"]},
+            {
+                test:/\.(less|css)$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
+            },
             { test: /\.png$/, loader: "url-loader?limit=100000" },
             { test: /\.jpg$/, loader: "file-loader" },
             { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
@@ -83,6 +86,10 @@ module.exports = {
         ]
     },
     plugins: [
+        new MiniCssExtractPlugin({
+            filename: "style.css",
+            chunkFilename: "[id].css"
+          }),
         new webpack.HotModuleReplacementPlugin(),
         // enable HMR globally
         new webpack.NamedModulesPlugin(),

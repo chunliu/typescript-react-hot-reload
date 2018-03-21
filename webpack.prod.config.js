@@ -2,6 +2,7 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const tsImportPluginFactory = require('ts-import-plugin');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
     mode: 'production',
@@ -13,7 +14,6 @@ module.exports = {
     },
     devtool: 'source-map',
     resolve: {
-        // Add '.ts' and '.tsx' as resolvable extensions.
         extensions: [".ts", ".tsx", ".js", ".json"]
     },
     module: {
@@ -40,8 +40,10 @@ module.exports = {
                 ] 
             },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
-            { test: /\.css$/, loader: "style-loader!css-loader" },
-            { test: /\.less$/, loaders: ["style-loader", "css-loader", "less-loader"]},
+            {
+                test:/\.(less|css)$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
+            },
             { test: /\.png$/, loader: "url-loader?limit=100000" },
             { test: /\.jpg$/, loader: "file-loader" },
             { test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff' },
@@ -51,6 +53,10 @@ module.exports = {
         ]
     },
     plugins: [
+        new MiniCssExtractPlugin({
+            filename: "style.css",
+            chunkFilename: "[id].css"
+          }),
         // prints more readable module names in the browser console on HMR updates
         new HtmlWebpackPlugin({template: resolve(__dirname, 'src/index.html')}),
         new webpack.DefinePlugin({
