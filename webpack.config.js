@@ -74,7 +74,11 @@ module.exports = {
             },
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
             {
-                test:/\.(less|css)$/,
+                test:/\.css$/,
+                use: [MiniCssExtractPlugin.loader, "css-loader"]  
+            },
+            {
+                test:/\.less$/,
                 use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
             },
             { test: /\.png$/, loader: "url-loader?limit=100000" },
