@@ -4,13 +4,12 @@ This is a very simple template for creating React applications with TypeScript. 
 
 This template is based on the following packages: 
 
-* [webpack](https://webpack.js.org/)
+* [webpack 4](https://webpack.js.org/)
 * [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
-* [react-hot-loader](https://github.com/gaearon/react-hot-loader)
-* ~~[awesome-typescript-loader](https://github.com/s-panferov/awesome-typescript-loader)~~
+* [typescript 2.7](http://www.typescriptlang.org/)
 * [ts-loader](https://github.com/TypeStrong/ts-loader)
-* [antd](https://ant.design/docs/react/introduce)
-* [ts-import-plugin](https://github.com/Brooooooklyn/ts-import-plugin) -- this template doesn't rely on babel-plugin-import to do the modular import anymore.
+* [antd 3](https://ant.design/docs/react/introduce)
+* [ts-import-plugin](https://github.com/Brooooooklyn/ts-import-plugin) 
 
 Other reference:
 
