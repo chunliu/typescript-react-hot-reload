@@ -11,6 +11,8 @@ This template is based on the following packages:
 * [antd 3](https://ant.design/docs/react/introduce)
 * [ts-import-plugin](https://github.com/Brooooooklyn/ts-import-plugin) 
 
+For recent changes, please check [changelog.md](./CHANGELOG.md). 
+
 Other reference:
 
 * [TypeScript document](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
