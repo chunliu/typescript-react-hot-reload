@@ -1,6 +1,6 @@
 # typescript-react-hot-reload
 
-This is a very simple template for creating React web applications with TypeScript. It is configured with webpack dev server  and hot module replacement to allow changes to be loaded while the application is running. 
+This is a very simple template for creating React web applications with TypeScript. It is configured with webpack dev server  and hot module replacement to allow changes to be loaded while the application is running. A sample of this template can be viewed here: https://chunliu.github.io/hotloader.
 
 This template is based on the following packages: 
 
