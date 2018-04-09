@@ -31,6 +31,12 @@ class Sidebar extends React.Component<SidebarProps, SidebarState> {
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="2">
+                        <Link to="/todo">
+                            <Icon type="check-square-o" />
+                            <span className="nav-text">Todo</span>
+                        </Link>
+                    </Menu.Item>
+                    <Menu.Item key="3">
                         <Link to="/about">
                             <Icon type="file" />
                             <span className="nav-text">About</span>
