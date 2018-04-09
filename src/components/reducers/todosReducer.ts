@@ -1,25 +1,26 @@
+import { Action } from "redux";
 import { initState } from "./rootReducer";
-import { IInitStoreAction, ActionTypes, IAddTodoAction, ICompleteTodoAction } from "../actions/actionTypes";
+import * as todoActions from "../actions/actionTypes";
 
 export const todos = (
     state = initState.todos,
-    action: IInitStoreAction | IAddTodoAction,
+    action: Action,
 ) => {
     switch (action.type) {
-        case ActionTypes.INIT_STORE:
-            return (action as IInitStoreAction).todos;
-        case ActionTypes.ADD_TODO_ITEM: {
+        case todoActions.ActionTypes.INIT_STORE:
+            return (action as todoActions.IInitStoreAction).todos;
+        case todoActions.ActionTypes.ADD_TODO_ITEM: {
             const todoItems = state.slice();
-            const todo = (action as IAddTodoAction).todo;
+            const todo = (action as todoActions.IAddTodoAction).todo;
             todo.id = todoItems.length;
             todo.key = todoItems.length;
             todo.isCompleted = false;
             todoItems.push(todo);
             return todoItems;
         }
-        case ActionTypes.COMPLETE_TODO_ITEM: {
+        case todoActions.ActionTypes.COMPLETE_TODO_ITEM: {
             const todoItems = state.slice();
-            const todo = (action as ICompleteTodoAction).todo;
+            const todo = (action as todoActions.ICompleteTodoAction).todo;
             for (const item of todoItems) {
                 if (item.id === todo.id) {
                     item.isCompleted = true;
