@@ -1,5 +1,9 @@
 # Change Log
 
+### Version 1.1.2 --- 09/04/2018
+
+* Add a todo list page as a template for using Redux.
+
 ### Version 1.1.0 --- 21/03/2018
 
 * Updated webpack to webpack 4, removed react-hot-loader and UglifyJsPlugin.

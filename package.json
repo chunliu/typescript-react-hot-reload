@@ -1,6 +1,6 @@
 {
   "name": "hotloader",
-  "version": "1.1.0",
+  "version": "1.1.2",
   "description": "A simple template for creating react app using TypeScript with hot reload.",
   "main": "index.js",
   "scripts": {

@@ -8,6 +8,8 @@ This template is based on the following packages:
 * [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
 * [typescript 2.7](http://www.typescriptlang.org/)
 * [ts-loader](https://github.com/TypeStrong/ts-loader)
+* [react 16](https://reactjs.org/)
+* [redux](https://redux.js.org/introduction)
 * [antd 3](https://ant.design/docs/react/introduce)
 * [ts-import-plugin](https://github.com/Brooooooklyn/ts-import-plugin) 
 
