@@ -19,7 +19,7 @@ export const initStore = () => {
         }, {
             key: 1,
             id: 1,
-            name: "Wire redux to the template.",
+            name: "Wire up redux to the template.",
             isCompleted: false,
         }];
         return dispatch(initStoreAction(todos));

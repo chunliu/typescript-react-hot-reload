@@ -1,4 +1,4 @@
-import { combineReducers } from "redux"
+import { combineReducers } from "redux";
 import { IState } from "../store/configStore";
 import { todos } from "./todosReducer";
 

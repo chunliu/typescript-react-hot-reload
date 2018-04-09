@@ -1,42 +1,41 @@
 import * as React from "react";
+import * as Redux from "redux";
+import {connect} from "react-redux";
 import { Card, Table, Button, Modal, Input } from "antd";
 import { TodoItem } from "../model/TodoItem";
+import { IState } from "../store/configStore";
+import { actionCreators } from "../actions/actions";
 
 const { Column } = Table;
 
-interface ITodoState {
+interface ITodoProps {
     todoItems: TodoItem[];
+    actions: any;
+}
+
+interface ITodoState {
     modalVisible: boolean;
     newTaskName: string;
 }
 
-class TodoPage extends React.Component<{}, ITodoState> {
-    constructor(props: {}) {
+class TodoPageComponent extends React.Component<ITodoProps, ITodoState> {
+    constructor(props: ITodoProps) {
         super(props);
         this.state = {
-            todoItems: [],
             modalVisible: false,
             newTaskName: "",
         };
-        this.mapTodoItems = this.mapTodoItems.bind(this);
-        this.fetchTodoList = this.fetchTodoList.bind(this);
-        this.updateTodoList = this.updateTodoList.bind(this);
         this.handleOk = this.handleOk.bind(this);
         this.handleCancel = this.handleCancel.bind(this);
-        this.addTodoItem = this.addTodoItem.bind(this);
-    }
-
-    public componentDidMount() {
-        this.fetchTodoList();
     }
 
     public render(): JSX.Element {
         return (
             <div>
-                <Card bordered title="Welcome to Go Todo" style={{ margin: "16px 16px"}}>
+                <Card bordered title="Todo List" style={{ margin: "16px 16px"}}>
                     <Button type="primary" icon="plus"
                         onClick={() => {this.setState({modalVisible: true}); }}>New Task</Button>
-                    <Table dataSource={this.state.todoItems}>
+                    <Table dataSource={this.props.todoItems}>
                         <Column title="Id" dataIndex="id" key="id"></Column>
                         <Column title="Task" dataIndex="name" key="name"></Column>
                         <Column title="Status" dataIndex="isCompleted" key="isCompleted"
@@ -47,7 +46,7 @@ class TodoPage extends React.Component<{}, ITodoState> {
                             <Button type="primary" disabled={record.isCompleted}
                                 onClick={() => {
                                     record.isCompleted = true;
-                                    this.updateTodoList(record);
+                                    this.props.actions.completeTodoAction(record);
                                 }}>Complete</Button>
                         )} />
                     </Table>
@@ -64,24 +63,6 @@ class TodoPage extends React.Component<{}, ITodoState> {
         );
     }
 
-    private fetchTodoList() {
-
-    }
-
-    private updateTodoList(item: TodoItem) {
-
-    }
-
-    private mapTodoItems(items: any[]): TodoItem[] {
-        return items.map((item) => {
-            return item as TodoItem;
-        });
-    }
-
-    private addTodoItem = (item: TodoItem) => {
-
-    }
-
     private handleOk = () => {
         const item: TodoItem = {
             id: 0,
@@ -89,7 +70,7 @@ class TodoPage extends React.Component<{}, ITodoState> {
             name: this.state.newTaskName,
             isCompleted: false,
         };
-        this.addTodoItem(item);
+        this.props.actions.addTodoAction(item);
         this.setState({modalVisible: false});
     }
     private handleCancel = () => {
@@ -97,4 +78,16 @@ class TodoPage extends React.Component<{}, ITodoState> {
     }
 }
 
-export default TodoPage;
+const mapStateToProps = (state: IState) => {
+    return {
+        todoItems: state.todos,
+    };
+};
+
+const mapDispatchToProps = (dispatch: Redux.Dispatch<any>) => {
+    return {
+        actions: Redux.bindActionCreators(actionCreators, dispatch),
+    };
+};
+
+export const TodoPage = connect(mapStateToProps, mapDispatchToProps)(TodoPageComponent);
