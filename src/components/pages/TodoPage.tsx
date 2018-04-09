@@ -1,14 +1,8 @@
 import * as React from "react";
 import { Card, Table, Button, Modal, Input } from "antd";
+import { TodoItem } from "../model/TodoItem";
 
 const { Column } = Table;
-
-interface TodoItem {
-    id: number;
-    key: number;
-    name: string;
-    isCompleted: boolean;
-}
 
 interface ITodoState {
     todoItems: TodoItem[];
