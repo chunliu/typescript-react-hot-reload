@@ -1,6 +1,6 @@
 # Change Log
 
-### Version 1.1.2 --- 09/04/2018
+### Version 1.1.4 --- 30/05/2018
 
 * Update typescript to 2.8.4, React to 16.4.0, Antd to 3.5.4, and other components to the latest version. 
 * Didn't update Redux to 4.0.0 because there are compatibility issues with redux-thunk, and redux-devtools-extension.
