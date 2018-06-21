@@ -1,13 +1,18 @@
 # Change Log
 
+### Version 1.1.4 --- 21/06/2018
+
+* Updated Redux to version 4.0, and other packages to the latest version
+* Fixed the code compatibility issues with Redux 4.0
+
 ### Version 1.1.4 --- 30/05/2018
 
-* Update typescript to 2.8.4, React to 16.4.0, Antd to 3.5.4, and other components to the latest version. 
+* Updated typescript to 2.8.4, React to 16.4.0, Antd to 3.5.4, and other components to the latest version. 
 * Didn't update Redux to 4.0.0 because there are compatibility issues with redux-thunk, and redux-devtools-extension.
 
 ### Version 1.1.2 --- 09/04/2018
 
-* Add a todo list page as a template for using Redux.
+* Added a todo list page as a template for using Redux.
 
 ### Version 1.1.0 --- 21/03/2018
 
