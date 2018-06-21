@@ -1,6 +1,6 @@
 # Change Log
 
-### Version 1.1.4 --- 21/06/2018
+### Version 1.2.0 --- 21/06/2018
 
 * Updated Redux to version 4.0, and other packages to the latest version
 * Fixed the code compatibility issues with Redux 4.0
