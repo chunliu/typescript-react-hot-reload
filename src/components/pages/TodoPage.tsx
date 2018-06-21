@@ -10,7 +10,7 @@ const { Column } = Table;
 
 interface ITodoProps {
     todoItems: TodoItem[];
-    actions: any;
+    actions?: any;
 }
 
 interface ITodoState {
@@ -78,7 +78,7 @@ class TodoPageComponent extends React.Component<ITodoProps, ITodoState> {
     }
 }
 
-const mapStateToProps = (state: IState) => {
+const mapStateToProps = (state: IState) : ITodoProps => {
     return {
         todoItems: state.todos,
     };
@@ -90,4 +90,4 @@ const mapDispatchToProps = (dispatch: Redux.Dispatch<any>) => {
     };
 };
 
-export const TodoPage = connect(mapStateToProps, mapDispatchToProps)(TodoPageComponent);
+export const TodoPage = connect<ITodoProps>(mapStateToProps, mapDispatchToProps)(TodoPageComponent);

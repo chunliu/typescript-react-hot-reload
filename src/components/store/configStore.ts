@@ -1,4 +1,4 @@
-import { createStore, applyMiddleware, Dispatch } from "redux";
+import { createStore, applyMiddleware, Dispatch, Action } from "redux";
 import {composeWithDevTools} from "redux-devtools-extension/developmentOnly";
 import thunk from "redux-thunk";
 import { TodoItem } from "../model/TodoItem";
@@ -10,7 +10,7 @@ export interface IState {
 }
 
 export const initStore = () => {
-    return (dispatch: Dispatch<{}>) => {
+    return (dispatch: Dispatch<Action>) => {
         const todos: TodoItem[] = [{
             key: 0,
             id: 0,
