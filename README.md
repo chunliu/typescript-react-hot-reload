@@ -9,7 +9,7 @@ This template is based on the following packages:
 * [typescript 2.8](http://www.typescriptlang.org/)
 * [ts-loader](https://github.com/TypeStrong/ts-loader)
 * [react 16](https://reactjs.org/)
-* [redux](https://redux.js.org/introduction)
+* [redux 4](https://redux.js.org/introduction)
 * [antd 3](https://ant.design/docs/react/introduce)
 * [ts-import-plugin](https://github.com/Brooooooklyn/ts-import-plugin) 
 
