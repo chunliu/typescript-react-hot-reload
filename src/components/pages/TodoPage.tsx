@@ -78,7 +78,7 @@ class TodoPageComponent extends React.Component<ITodoProps, ITodoState> {
     }
 }
 
-const mapStateToProps = (state: IState) : ITodoProps => {
+const mapStateToProps = (state: IState): ITodoProps => {
     return {
         todoItems: state.todos,
     };
