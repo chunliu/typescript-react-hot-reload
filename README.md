@@ -6,7 +6,7 @@ This template is based on the following packages:
 
 * [webpack 4](https://webpack.js.org/)
 * [webpack-dev-server](https://github.com/webpack/webpack-dev-server)
-* [typescript 2.8](http://www.typescriptlang.org/)
+* [typescript](http://www.typescriptlang.org/)
 * [ts-loader](https://github.com/TypeStrong/ts-loader)
 * [react 16](https://reactjs.org/)
 * [redux 4](https://redux.js.org/introduction)
