@@ -1,5 +1,9 @@
 # Change Log
 
+### Version 1.6.0 -- 08/08/2019
+
+* Updated all packages to the latest version. 
+
 ### Version 1.5.0 -- 08/01/2019
 
 * Updated all packages to the latest version.
