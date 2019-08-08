@@ -1,0 +1,12 @@
+version: "3.7"
+services:
+  react:
+    container_name: react
+    image: node
+    ports:
+      - "8080:8080"
+    network_mode: "host"
+    volumes:
+      - ${PWD}/:/home/node/app
+    working_dir: /home/node/app
+    command: yarn start
