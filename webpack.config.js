@@ -34,7 +34,7 @@ module.exports = {
         // Change it if other port needs to be used
         hot: true,
         // enable HMR on the server
-        noInfo: true,
+        noInfo: false,
         quiet: false,
         // minimize the output to terminal.
         contentBase: resolve(__dirname, 'src'),
