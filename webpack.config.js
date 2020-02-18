@@ -39,8 +39,9 @@ module.exports = {
         // minimize the output to terminal.
         contentBase: resolve(__dirname, 'src'),
         // match the output path
-        publicPath: '/'
+        publicPath: '/',
         // match the output `publicPath`
+        open: true
     },
     module: {
         rules: [
