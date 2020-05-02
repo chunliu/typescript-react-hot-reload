@@ -1,8 +1,13 @@
 # Change Log
 
+### Version 1.7.0 -- 02/05/2020
+
+* Replace TSLint with ESLint as [TSLint is deprecated](https://github.com/palantir/tslint/issues/4534).
+* Update the package version.
+
 ### Version 1.6.0 -- 08/08/2019
 
-* Updated all packages to the latest version. 
+* Updated all packages to the latest version.
 
 ### Version 1.5.0 -- 08/01/2019
 
