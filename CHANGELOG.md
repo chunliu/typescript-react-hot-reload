@@ -1,9 +1,10 @@
 # Change Log
 
-### Version 1.7.0 -- 02/05/2020
+### Version 2.0.0 -- 02/05/2020
 
+* Update antd to 4.2.0. Because of the breaking change of antd 4.0, the pages are not compatible with the previous version. The old version for antd 3 can be found in `antd3` branch.
 * Replace TSLint with ESLint as [TSLint is deprecated](https://github.com/palantir/tslint/issues/4534).
-* Update the package version.
+* Update the packages version.
 
 ### Version 1.6.0 -- 08/08/2019
 
