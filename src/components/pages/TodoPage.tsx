@@ -2,7 +2,7 @@ import * as React from 'react';
 import * as Redux from 'redux';
 import {connect} from 'react-redux';
 import { Card, Table, Button, Modal, Input } from 'antd';
-import * as icons from '@ant-design/icons';
+import * as Icons from '@ant-design/icons';
 import { TodoItem } from '../model/TodoItem';
 import { IState } from '../store/configStore';
 import { actionCreators } from '../actions/actions';
@@ -34,7 +34,7 @@ class TodoPageComponent extends React.Component<ITodoProps, ITodoState> {
         return (
             <div>
                 <Card bordered title="Todo List" style={{ margin: "16px 16px"}}>
-                    <Button type="primary" icon={<icons.PlusOutlined />}
+                    <Button type="primary" icon={<Icons.PlusOutlined />}
                         onClick={() => {this.setState({modalVisible: true}); }}>New Task</Button>
                     <Table dataSource={this.props.todoItems}>
                         <Column title="Id" dataIndex="id" key="id"></Column>

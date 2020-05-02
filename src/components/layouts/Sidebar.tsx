@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { Layout, Menu, Icon } from 'antd';
-import { HomeOutlined, CheckSquareOutlined, FileOutlined } from '@ant-design/icons';
+import { Layout, Menu } from 'antd';
+import * as Icons from '@ant-design/icons';
 import { Link } from 'react-router-dom';
 import './Sidebar.less';
 
@@ -25,19 +25,19 @@ class Sidebar extends React.Component<{}, SidebarState> {
                 <Menu theme="dark" mode={this.state.mode} defaultSelectedKeys={["1"]}>
                     <Menu.Item key="1">
                         <Link to="/home">
-                            <HomeOutlined />
+                            <Icons.HomeOutlined />
                             <span className="nav-text">Home</span>
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="2">
                         <Link to="/todo">
-                            <CheckSquareOutlined />
+                            <Icons.CheckSquareOutlined />
                             <span className="nav-text">Todo</span>
                         </Link>
                     </Menu.Item>
                     <Menu.Item key="3">
                         <Link to="/about">
-                            <FileOutlined />
+                            <Icons.FileOutlined />
                             <span className="nav-text">About</span>
                         </Link>
                     </Menu.Item>
