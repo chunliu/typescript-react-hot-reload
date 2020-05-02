@@ -7,9 +7,8 @@
     "lint": "eslint 'src/**/*.{ts,tsx}'",
     "start": "webpack-dev-server",
     "test": "jest",
-    "build": "tsc && webpack --progress",
-    "clean": "rd /s/q built",
-    "prepare": "tsc && webpack --progress --config webpack.prod.config.js"
+    "build": "tsc && webpack --progress --config webpack.prod.config.js",
+    "clean": "rd /s/q built"
   },
   "author": "Chun Liu",
   "license": "MIT",
