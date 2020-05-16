@@ -1,6 +1,6 @@
 # typescript-react-hot-reload
 
-[![Build Status](https://dev.azure.com/chunliusg/github/_apis/build/status/chunliu.typescript-react-hot-reload?branchName=master)](https://dev.azure.com/chunliusg/github/_build/latest?definitionId=1&branchName=master)
+![CI Build](https://github.com/chunliu/typescript-react-hot-reload/workflows/CI%20Build/badge.svg)
 
 This is a very simple boilerplate for creating React web applications with TypeScript. It is configured with webpack dev server and hot module replacement to allow changes to be loaded while the application is running. The following is a preview of it:
 
