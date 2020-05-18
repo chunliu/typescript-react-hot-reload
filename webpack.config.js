@@ -76,11 +76,18 @@ module.exports = {
             { enforce: "pre", test: /\.js$/, loader: "source-map-loader" },
             {
                 test:/\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"]  
-            },
-            {
-                test:/\.less$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "less-loader"]
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {
+                          // only enable hot in development
+                          hmr: true,
+                          // if hmr does not work, this is a forceful method.
+                          reloadAll: true,
+                        },
+                    },
+                    "css-loader"
+                ]  
             },
             { test: /\.png$/, loader: "url-loader?limit=100000" },
             { test: /\.jpg$/, loader: "file-loader" },
