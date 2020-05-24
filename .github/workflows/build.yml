@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: CI Build
+name: CI/CD
 
 on:
   push:
@@ -24,10 +24,14 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm ci
-    - run: npm run build
-    - name: Upload a Build Artifact
-      uses: actions/upload-artifact@v2
+
+    - name: build
+      run: |
+        npm ci
+        npm run build
+
+    - name: deploy
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        name: drop
-        path: ./dist/
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./dist
