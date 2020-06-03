@@ -17,10 +17,7 @@ This boilerplate is based on the following packages:
 
 For recent changes, please check [changelog.md](./CHANGELOG.md).
 
-Other reference:
-
-* [TypeScript document](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
-* [Hot Module Replacement in webpack](https://webpack.js.org/concepts/hot-module-replacement/)
+## Install
 
 How to use this template:
 
@@ -29,5 +26,10 @@ git clone https://github.com/chunliu/typescript-react-hot-reload.git
 npm install
 npm start
 ```
+
+## Other reference:
+
+* [TypeScript document](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
+* [Hot Module Replacement in webpack](https://webpack.js.org/concepts/hot-module-replacement/)
 
 All feedback and pull requests are welcome.
