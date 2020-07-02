@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Card } from "antd";
 
-class AboutPage extends React.Component<{}, {}> {
+class AboutPage extends React.Component<unknown, unknown> {
     public render(): JSX.Element {
         return (
             <Card bordered title="About" style={{ margin: "16px 16px"}}>

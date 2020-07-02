@@ -11,7 +11,7 @@ const { Column } = Table;
 
 interface ITodoProps {
     todoItems: TodoItem[];
-    actions?: any;
+    actions?: Redux.ActionCreatorsMapObject;
 }
 
 interface ITodoState {
@@ -26,8 +26,8 @@ class TodoPageComponent extends React.Component<ITodoProps, ITodoState> {
             modalVisible: false,
             newTaskName: "",
         };
-        this.handleOk = this.handleOk.bind(this);
-        this.handleCancel = this.handleCancel.bind(this);
+        // this.handleOk = this.handleOk.bind(this);
+        // this.handleCancel = this.handleCancel.bind(this);
     }
 
     public render(): JSX.Element {
@@ -47,7 +47,9 @@ class TodoPageComponent extends React.Component<ITodoProps, ITodoState> {
                             <Button type="primary" disabled={record.isCompleted}
                                 onClick={() => {
                                     record.isCompleted = true;
-                                    this.props.actions.completeTodoAction(record);
+                                    if(this.props.actions) {
+                                        this.props.actions.completeTodoAction(record);
+                                    }
                                 }}>Complete</Button>
                         )} />
                     </Table>
@@ -71,7 +73,8 @@ class TodoPageComponent extends React.Component<ITodoProps, ITodoState> {
             name: this.state.newTaskName,
             isCompleted: false,
         };
-        this.props.actions.addTodoAction(item);
+        if(this.props.actions)
+            this.props.actions.addTodoAction(item);
         this.setState({modalVisible: false});
     }
     private handleCancel = () => {

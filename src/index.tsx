@@ -7,6 +7,11 @@ ReactDOM.render(
     document.getElementById("app"),
 );
 
+/* eslint @typescript-eslint/no-unsafe-member-access: "off",
+          @typescript-eslint/no-unsafe-call: "off",
+          @typescript-eslint/no-unsafe-assignment: "off",
+          @typescript-eslint/no-var-requires: "off"
+*/
 // Hot Module Replacement
 declare let module: { hot: any };
 

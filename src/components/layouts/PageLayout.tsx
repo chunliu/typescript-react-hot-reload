@@ -7,7 +7,7 @@ import {renderRoutes} from "react-router-config";
 import { routes } from "../routes";
 import "./PageLayout.css";
 
-const PageLayout: React.StatelessComponent<{}> = () => {
+const PageLayout: React.StatelessComponent<unknown> = () => {
     return (
         <Layout className="ant-layout-has-sider">
             <Sidebar />

@@ -3,7 +3,7 @@ import { Layout, Row, Col, Menu } from "antd";
 import { UserOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
 
-export const Header: React.StatelessComponent<{}> = () => {
+export const Header: React.StatelessComponent<unknown> = () => {
     return (
         <Layout.Header style={{ background: "#fff", padding: 0 }}>
             <Row justify="end" align="middle">

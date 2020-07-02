@@ -9,7 +9,7 @@ import { configureStore, initStore } from "./store/configStore";
 const store = configureStore();
 store.dispatch<any>(initStore());
 
-class App extends React.Component<{}, {}> {
+class App extends React.Component<unknown, unknown> {
     public render(): JSX.Element {
         return (
             <ConfigProvider locale={enUS}>
