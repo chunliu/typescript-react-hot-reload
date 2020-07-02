@@ -1,17 +1,9 @@
 {
     "compilerOptions": {
         "outDir": "./built/",
-        "module": "esnext",
-        "target": "es5",
-        "lib": [
-            "dom",
-            "dom.iterable",
-            "es5",
-            "es2015",
-            "es2016"
-          ],
+        "module": "commonjs",
+        "target": "es6",
         "sourceMap": true,
-        "allowJs": true,
         "jsx": "react",
         "moduleResolution": "node",
         "rootDir": "src",

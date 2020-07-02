@@ -10,15 +10,15 @@ export const routes: RouteConfig[] = [
     {
         path: "/home",
         exact: true,
-        component: () => (<HomePage />),
+        component: () : any => <HomePage />,
     },
     {
         path: "/todo",
-        component: () => (<TodoPage />),
+        component: () : any => <TodoPage />,
     },
     {
         path: "/about",
-        component: () => (<AboutPage />),
+        component: () : any => <AboutPage />,
     },
 ];
 
